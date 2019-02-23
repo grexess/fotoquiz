@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Jugendweihe 2019</title>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="./script/data.js"></script>
+    <script src="./script/common.js"></script>
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+        crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./styles/common.css">
+
+</head>
+
+<body>
+
+    <div class="grid">
+        <!-- grid tiles-->
+    </div>
+
+    <!-- full image in modal-->
+    <div id="myModal" class="modal zoomin">
+        <div class="w3-row custom-flex">
+            <div class="w3-quarter w3-center">
+                <button class="w3-button w3-yellow w3-cell">
+                    <h1 id="shwcounter"></h1>
+                </button>
+                <button id="addcounter" class="w3-button w3-red w3-cell"><i class="fas fa-search-plus fa-5x"></i></button>
+            </div>
+            <div class="w3-half w3-center">
+                <div id="modal-content" class="w3-display-container">
+                    <div id="person" class="w3-hide w3-animate-zoom w3-panel w3-white w3-opacity w3-leftbar w3-border-green w3-display-bottomleft w3-margin w3-left-align w3-text-green" style="width: 50%;">
+                        <h1 id="firstname"></h1>
+                        <h2 id="lastname"></h2>
+                    </div>
+                </div>
+            </div>
+            <div class="w3-quarter w3-center">
+                <button id="solved" class="w3-button w3-green w3-cell"><i class="fa fa-check-square fa-10x"></i></button>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
