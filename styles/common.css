@@ -29,6 +29,7 @@
 /* TILE DEFINITION */
 
 .gridtile {
+    margin:2px;
     position: relative;
     color: #fff !important;
     /*
@@ -51,10 +52,25 @@
     font-size: 60px !important;
 }
 
+.gridtilecontentonHover {
+    padding: 8px 16px !important;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    font-size: 120px !important;
+    text-shadow: 1px 1px 0 #444;
+    color:red;
+}
+
 .gridtile:hover {
-    /*background-image: url("https://picsum.photos/300/300?image=109");*/
+    /*background-image: url("https://picsum.photos/300/300?image=109");
     background-size: cover;
     background-repeat: no-repeat;
+    */
+    background-color: rgb(24, 197, 62);
+    background-image: -webkit-linear-gradient(135deg, rgb(24, 197, 62) 50%, rgb(199, 243, 208) 50%);
 }
 
 /* w3-row with vertical centered content */
@@ -161,3 +177,11 @@
         transform: scale(1);
     }
 }
+
+/* Text effects */
+
+.flash {
+    display: inline-block;
+    text-shadow: #bbb 0 0 1px, #fff 0 -1px 2px, #fff 0 -3px 2px, rgba(0,0,0,0.8) 0 30px 25px;
+    transition: margin-left 0.3s cubic-bezier(0, 1, 0, 1);
+  }

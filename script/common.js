@@ -11,16 +11,25 @@ $(function () {
         imageSolved();
     });
 
+    /*background image on hover */
     $(".gridtile").hover(
         function () {
+            /*
             let x = "url(https://picsum.photos/300/300?image=" + $(this).data("number") + ")";
             $(this).css("background-image", x);
+            */
+            $(this).find($(".gridid")).removeClass("gridtilecontent").addClass("gridtilecontentonHover");
         },
         function () {
+            /*
             $(this).css("background-color", "013A6B");
             $(this).css("background-image", "-webkit-linear-gradient(45deg, #004E95 50%, #013A6B 50%)");
+            */
+
+           $(this).find($(".gridid")).removeClass("gridtilecontentonHover").addClass("gridtilecontent");
         }
     );
+   
 
     $(".gridtile").click(function () {
 
@@ -47,7 +56,7 @@ function renderGrid() {
     /* render the tiles */
     for (var i = 1; i <= data.length; i++) {
         $(".grid").append(
-            '<div class="gridtile" data-number="' + i + '"><div class="gridtilecontent">' +
+            '<div class="gridtile w3-round-xlarge" data-number="' + i + '"><div class="gridid gridtilecontent flash">' +
             i +
             "</div></div>"
         );
@@ -67,7 +76,10 @@ function imageSolved() {
 
 function resetAfterSolving() {
     $("#person").removeClass("w3-show").addClass("w3-hide");
-    $(person.curr).css("background-image", "url(https://picsum.photos/300/300?image=666)");
+    //$(person.curr).css("background-image", "url(https://picsum.photos/300/300?image=666)");
+    //$(person.curr).css("background", "linear-gradient(to bottom right, green, white)");
+    $(person.curr).css("background", "white");
+    $(person.curr).addClass("w3-border w3-border-green");
     $(person.curr).off();
     $(person.curr).find(".gridtilecontent").text(person.counter);
     $(person.curr).find(".gridtilecontent").css("color", "red");
@@ -78,7 +90,7 @@ function resetAfterSolving() {
     window.setTimeout(function () {
         $("#myModal").hide();
         $("#myModal").removeClass("zoomout").addClass("zoom");
-    }, 3000);
+    }, 2000);
 }
 
 /* increase the counter and cross fade the persons images */

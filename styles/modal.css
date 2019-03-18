@@ -1,0 +1,98 @@
+
+/* Modal Settings */
+/* full sized image*/
+/* The Modal (background) */
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 3em;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(255, 255, 255);
+    /* Fallback color */
+    background-color: rgba(255, 255, 255, 1);
+    /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-style {
+    margin: auto;
+    display: block;
+    width: 800px;
+    height: 800px;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px) {
+    #myModal {
+        width: 100%;
+    }
+}
+
+/* Modal Animation */
+/* Add Animation */
+.zoomin {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 3s;
+    animation-name: zoom;
+    animation-duration: 3s;
+
+}
+
+.zoomout {
+    -webkit-animation-name: zoom-out;
+    -webkit-animation-duration: 5s;
+    animation-name: zoom-out;
+    animation-duration: 5s;
+}
+
+@-webkit-keyframes zoom-out {
+    from {
+        -webkit-transform: scale(1);
+    }
+
+    to {
+        -webkit-transform: scale(0);
+    }
+}
+
+@keyframes zoom-out {
+    from {
+        transform: scale(1)
+    }
+
+    to {
+        transform: scale(0)
+    }
+}
+
+@-webkit-keyframes zoom {
+    from {
+        -webkit-transform: scale(0);
+    }
+
+    to {
+        -webkit-transform: scale(1);
+    }
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
