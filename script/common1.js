@@ -58,8 +58,9 @@ function getTile(cnt, data) {
         '                              </div>' +
         '                          </div>' +
         '                          <div class="back w3-sepia-max" style="background-image: url(' + getYoungImage(cnt) + ')">' +
+        '                              <div class="topright"></div>' +
         '                              <div class="inner">' +
-        '                                <p>' + data.txt2 + '</p>' +
+        '                                <p id="mt">' + data.txt2 + '</p>' +
         '                              </div>' +
         '                          </div>' +
         '                      </div>' +
@@ -81,11 +82,11 @@ function imageSolved() {
 
 function resetAfterSolving() {
     $("#person").removeClass("w3-show").addClass("w3-hide");
-    $(person.curr).css("background-image", "url('" + person.old + "')");
+    $(person.curr).css("background-image", "url('" + person.young + "')");
     $(person.curr).css("background-size", "cover");
     $(person.curr).find(".inner").empty();
-    $(person.curr).find(".back").removeClass("w3-sepia-max");
-    $(person.curr).append("<div>SOLVED!</div>");
+    $(person.curr).find(".back").removeClass("w3-sepia-max").css("background-image", "url('" + person.old + "')");
+    $(person.curr).find(".topright").text(person.counter);
     $(person.curr).off().unbind().addClass("w3-round-large");
 
     resetPerson();
