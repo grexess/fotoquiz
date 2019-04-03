@@ -7,8 +7,11 @@
 
     <title>Jugendweihe 2019</title>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+    <script src="https://ricostacruz.com/jquery.transit/jquery.transit.min.js"></script>
+    <script src="./script/background.js"></script>
     <script src="./script/data.js"></script>
     <script src="./script/common1.js"></script>
 
@@ -16,18 +19,23 @@
 
 
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 
     <link rel="stylesheet" href="./styles/modal.css">
     <link rel="stylesheet" href="./styles/common1.css">
+<!--    <link rel="stylesheet" href="./styles/stars.css">  -->
 
 
 
 </head>
 
 <body>
+ <!-- <div id='stars'></div>
+    <div id='stars2'></div>
+    <div id='stars3'></div>  -->
+
 
     <div class="wrapper">
         <h1>Jugendweihe 2019 - Wer bin ich?</h1>
@@ -37,18 +45,18 @@
 
     <!-- full image in modal-->
     <div id="myModal" class="modal zoomin">
-
+        <canvas id=c></canvas>
         <div class="w3-third w3-center">
             <div class="w3-display-container modal-style">
                 <div class="w3-display-middle">
                     <div class="w3-margin">
                         <div id="shwcounter" class="circle">0</div>
                     </div>
-                    <div class="w3-margin">
+                    <!-- <div class="w3-margin">
                         <div id="addcounter" class="btn btnred">
                             <i class="fas fa-search-plus"></i>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="w3-margin">
                         <div id="solved" class="btn btngreen">
                             <i class="fa fa-check"></i>
@@ -59,7 +67,8 @@
         </div>
         <div class="w3-twothird w3-center">
             <div id="modal-content" class="w3-display-container w3-round-xlarge modal-style">
-                <div id="person" class="w3-hide w3-animate-zoom w3-panel w3-white w3-opacity w3-leftbar w3-border-green w3-display-bottomleft w3-margin w3-left-align w3-text-green"
+                <div id="person"
+                    class="w3-hide w3-animate-zoom w3-panel w3-white w3-opacity w3-leftbar w3-border-green w3-display-bottomleft w3-margin w3-left-align w3-text-green"
                     style="width: 50%;">
                     <h1 id="firstname"></h1>
                     <h2 id="lastname"></h2>

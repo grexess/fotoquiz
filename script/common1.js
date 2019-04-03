@@ -1,7 +1,12 @@
-var person;
+var person, data;
+
 resetPerson();
 
 $(function () {
+
+     data = shuffle(xdata);
+
+renderBackground();
 
     renderGrid();
 
@@ -16,6 +21,10 @@ $(function () {
 });
 
 function openModal(elem) {
+
+    renderBackground1();
+
+
     person.curr = $(elem);
     person.young = getYoungImage(person.curr.data("number"));
     person.old = getOldImage(person.curr.data("number"));
@@ -28,7 +37,8 @@ function openModal(elem) {
 
     $("#myModal").show();
 
-    $("#addcounter").click(function () {
+    //$("#addcounter").click(function () {
+        $("#modal-content").click(function () {
         crossfadeImage();
     });
 
@@ -40,25 +50,25 @@ function openModal(elem) {
 
 
 function renderGrid() {
+
     /* render the tiles */
-    for (var i = 1; i <= data.length; i++) {
-        $(".cols").append(getTile(i, data[i - 1]));
+    for (var i = 0; i < data.length; i++) {
+        $(".cols").append(getTile(i, data[i]));
     }
 }
 
 
 function getTile(cnt, data) {
 
-    var myvar = '<div class="col" data-number="' + cnt + '">' +
+    var myvar = '<div class="col" data-number="' + (cnt) + '">' +
         '                      <div class="container">' +
-        '                          <div class="front" >' +
+        '                          <div class="front" ><div class="topright"></div>' +
         '                              <div class="inner">' +
-        '                                  <p>' + cnt + '</p>' +
+        '                                  <p>' + (cnt+1) + '</p>' +
         '                    <span>' + data.txt1 + '</span>' +
         '                              </div>' +
         '                          </div>' +
-        '                          <div class="back w3-sepia-max" style="background-image: url(' + getYoungImage(cnt) + ')">' +
-        '                              <div class="topright"></div>' +
+        '                          <div class="back w3-sepia-max" style="background-image: url(' + "./fotos/" + data.imgY + ')">' +
         '                              <div class="inner">' +
         '                                <p id="mt">' + data.txt2 + '</p>' +
         '                              </div>' +
@@ -72,8 +82,8 @@ function getTile(cnt, data) {
 function imageSolved() {
 
     //show name in picture
-    $("#firstname").text(data[person.curr.data("number") - 1].firstname);
-    $("#lastname").text(data[person.curr.data("number") - 1].lastname);
+    $("#firstname").text(data[person.curr.data("number")].firstname);
+    $("#lastname").text(data[person.curr.data("number")].lastname);
     $("#person").removeClass("w3-hide").addClass("w3-show");
     //close the picture
     window.setTimeout(resetAfterSolving, 3000);
@@ -114,11 +124,11 @@ function crossfadeImage() {
 }
 
 function getYoungImage(cnt) {
-    return "./fotos/" + cnt + "Y.png";
+    return "./fotos/" + data[cnt].imgY;
 }
 
 function getOldImage(cnt) {
-    return "./fotos/" + cnt + "O.png";
+    return "./fotos/" + data[cnt].imgO;
 }
 
 /* reset the global image variable */
@@ -130,3 +140,22 @@ function resetPerson() {
         counter: 0
     };
 }
+
+function shuffle(array) {
+    var currentIndex = array.length, temporaryValue, randomIndex;
+  
+    // While there remain elements to shuffle...
+    while (0 !== currentIndex) {
+  
+      // Pick a remaining element...
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex -= 1;
+  
+      // And swap it with the current element.
+      temporaryValue = array[currentIndex];
+      array[currentIndex] = array[randomIndex];
+      array[randomIndex] = temporaryValue;
+    }
+  
+    return array;
+  }
