@@ -78,5 +78,41 @@ xdata = [{
     id: '?',
     txt1: 'Ipsum',
     txt2: '?'
+  },
+  {
+    imgY: '010Y.png',
+    imgO: '010O.png',
+    firstname: 'Kilian',
+    lastname: 'Lamprecht',
+    id: '?',
+    txt1: 'Ipsum',
+    txt2: '?'
+  },
+  {
+    imgY: '011Y.png',
+    imgO: '011O.png',
+    firstname: 'Marvin',
+    lastname: 'Jacob',
+    id: '?',
+    txt1: 'Ipsum',
+    txt2: '?'
+  },
+  {
+    imgY: '012Y.png',
+    imgO: '012O.png',
+    firstname: 'Peer Arvo',
+    lastname: 'Hoinki',
+    id: '?',
+    txt1: 'Ipsum',
+    txt2: '?'
+  },
+  {
+    imgY: '013Y.png',
+    imgO: '013O.png',
+    firstname: 'Sofie',
+    lastname: 'Böhme',
+    id: '?',
+    txt1: 'Ipsum',
+    txt2: '?'
   }
 ]
