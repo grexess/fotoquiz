@@ -4,7 +4,7 @@ xdata = [{
     firstname: 'Christo',
     lastname: 'Lederer',
     id: '?',
-    txt1: 'Lorem',
+    txt1: 'Wer bin ich ...',
     txt2: '?'
   },
   {
@@ -13,8 +13,8 @@ xdata = [{
     firstname: 'Fabian',
     lastname: 'Imke',
     id: '?',
-    txt1: 'Frech',
-    txt2: 'wie Oscar'
+    txt1: 'Wer bin ich ...',
+    txt2: '?'
   },
   {
     imgY: '003Y.png',
@@ -22,7 +22,7 @@ xdata = [{
     firstname: 'Anton',
     lastname: 'Nüske',
     id: '?',
-    txt1: 'Ipsum',
+    txt1: 'Wer bin ich ...',
     txt2: '?'
   },
   {
@@ -31,7 +31,7 @@ xdata = [{
     firstname: 'Zhibo',
     lastname: 'Zhou',
     id: '?',
-    txt1: 'Ipsum',
+    txt1: 'Wer bin ich ...',
     txt2: '?'
   },
   {
@@ -40,7 +40,7 @@ xdata = [{
     firstname: 'Florian',
     lastname: 'Gellrich',
     id: '?',
-    txt1: 'Ipsum',
+    txt1: 'Wer bin ich ...',
     txt2: '?'
   },
   {
@@ -49,7 +49,7 @@ xdata = [{
     firstname: 'Maria',
     lastname: 'Seurich',
     id: '?',
-    txt1: 'Ipsum',
+    txt1: 'Wer bin ich ...',
     txt2: '?'
   },
   {
@@ -58,7 +58,7 @@ xdata = [{
     firstname: 'Victoria',
     lastname: 'Siebler',
     id: '?',
-    txt1: 'Ipsum',
+    txt1: 'Wer bin ich ...',
     txt2: '?'
   },
   {
@@ -67,7 +67,7 @@ xdata = [{
     firstname: 'Christoph',
     lastname: 'Berthold',
     id: '?',
-    txt1: 'Ipsum',
+    txt1: 'Wer bin ich ...',
     txt2: '?'
   },
   {
@@ -76,7 +76,7 @@ xdata = [{
     firstname: 'Toby',
     lastname: 'Beyer',
     id: '?',
-    txt1: 'Ipsum',
+    txt1: 'Wer bin ich ...',
     txt2: '?'
   },
   {
@@ -85,7 +85,7 @@ xdata = [{
     firstname: 'Kilian',
     lastname: 'Lamprecht',
     id: '?',
-    txt1: 'Ipsum',
+    txt1: 'Wer bin ich ...',
     txt2: '?'
   },
   {
@@ -94,7 +94,7 @@ xdata = [{
     firstname: 'Marvin',
     lastname: 'Jacob',
     id: '?',
-    txt1: 'Ipsum',
+    txt1: 'Wer bin ich ...',
     txt2: '?'
   },
   {
@@ -103,7 +103,7 @@ xdata = [{
     firstname: 'Peer Arvo',
     lastname: 'Hoinki',
     id: '?',
-    txt1: 'Ipsum',
+    txt1: 'Wer bin ich ...',
     txt2: '?'
   },
   {
@@ -112,7 +112,7 @@ xdata = [{
     firstname: 'Sofie',
     lastname: 'Böhme',
     id: '?',
-    txt1: 'Ipsum',
+    txt1: 'Wer bin ich ...',
     txt2: '?'
   },
   {
@@ -121,7 +121,7 @@ xdata = [{
     firstname: 'Finn',
     lastname: 'Spannaus',
     id: '?',
-    txt1: 'Ipsum',
+    txt1: 'Wer bin ich ...',
     txt2: '?'
   },
   {
@@ -130,7 +130,7 @@ xdata = [{
     firstname: 'Gustav',
     lastname: 'Rost',
     id: '?',
-    txt1: 'Ipsum',
+    txt1: 'Wer bin ich ...',
     txt2: '?'
   },
   {
@@ -139,7 +139,7 @@ xdata = [{
     firstname: 'Anton',
     lastname: 'Stoppa',
     id: '?',
-    txt1: 'Ipsum',
+    txt1: 'Wer bin ich ...',
     txt2: '?'
   },
   {
@@ -148,7 +148,7 @@ xdata = [{
     firstname: 'Janko',
     lastname: 'Grünzig',
     id: '?',
-    txt1: 'Ipsum',
+    txt1: 'Wer bin ich ...',
     txt2: '?'
   },
   {
@@ -157,17 +157,25 @@ xdata = [{
     firstname: 'Lisa',
     lastname: 'Mindergasov',
     id: '?',
-    txt1: 'Ipsum',
+    txt1: 'Wer bin ich ...',
     txt2: '?'
   },
-  ,
   {
     imgY: '019Y.png',
     imgO: '019O.png',
     firstname: 'Maximilian',
     lastname: 'Cremer',
     id: '?',
-    txt1: 'Ipsum',
+    txt1: 'Wer bin ich ...',
+    txt2: '?'
+  },
+  {
+    imgY: '020Y.png',
+    imgO: '020O.png',
+    firstname: 'Florian',
+    lastname: 'Oertel',
+    id: '?',
+    txt1: 'Wer bin ich ...',
     txt2: '?'
   }
 ]
