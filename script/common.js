@@ -10,15 +10,39 @@ $(function () {
 
     renderGrid();
 
-    $(".col").click(function () {
+ /*    $(".col").click(function () {
         openModal(this);
-    });
+    }); */
+
+    $(".col").click(function () {
+        openSingle(this);
+    }); 
 
     $(".col").bind('touchstart', function () {
         this.classList.toggle('hover');
     });
 
 });
+
+
+function openSingle(elem){
+
+    // renderBackground1();
+
+    person.curr = $(elem);
+    person.young = getYoungImage(person.curr.data("number"));
+    person.old = getOldImage(person.curr.data("number"));
+
+
+    let x = "-webkit-cross-fade(url('" + person.young + "'), url('" + person.old + "'), " + 0 + ")";
+    $("#modal-content").css("background-image", x);
+
+    $(".single").show();
+    $(".wrapper").hide();
+
+
+}
+
 
 function openModal(elem) {
 
