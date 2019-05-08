@@ -1,18 +1,37 @@
 html, body {
     height: 100vh;
   }
-/* 
-.single {
-    position:relative;
-    width:100vw;
-    height: 100vh;
-    margin: auto;
-  }
 
-  .element{
-    position:absolute;
-    top: 0; bottom: 0; left: 0; right: 0;
-    margin: auto;
-    background: tomato;
-    width: 100vw; height: 50vh;
-  } */
+  .parent {
+    position: relative;
+}
+
+.over-img {
+    position: absolute;
+    top: 80%;
+    left: 20%;
+    max-width: 800px;
+}
+
+#div1,
+#div2 {
+    display: block;
+    margin: 20px auto;
+    width: 800px;
+    height: 800px;
+    background-color: #ccc;
+    text-align: center;
+    position: relative;
+}
+
+#div1 img {
+    height: 800px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateY(-50%) translateX(-50%);
+}
+
+#div2 h1 {
+    line-height: 200px;
+}
