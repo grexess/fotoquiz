@@ -33,6 +33,24 @@
     height: 800px;
 }
 
+
+@media only screen and (max-width: 600px) {
+
+    .modal-style {
+      width: 600px;
+      height: 600px;
+    }
+  }
+  
+  
+  @media only screen and (max-width: 800px) {
+  
+    .modal-style {
+      width: 800px;
+      height: 800px;
+    }
+  }
+
 /* 100% Image Width on Smaller Screens */
 @media only screen and (max-width: 700px) {
     #myModal {

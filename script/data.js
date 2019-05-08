@@ -177,5 +177,23 @@ xdata = [{
     id: '?',
     txt1: 'Wer bin ich ...',
     txt2: '?'
+  },
+  {
+    imgY: '021Y.png',
+    imgO: '021O.png',
+    firstname: 'Chris',
+    lastname: 'Okuma',
+    id: '?',
+    txt1: 'Wer bin ich ...',
+    txt2: '?'
+  },
+  {
+    imgY: '022Y.png',
+    imgO: '022O.png',
+    firstname: 'Layla',
+    lastname: 'Krause',
+    id: '?',
+    txt1: 'Wer bin ich ...',
+    txt2: '?'
   }
 ]

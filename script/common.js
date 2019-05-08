@@ -22,7 +22,7 @@ $(function () {
 
 function openModal(elem) {
 
-    renderBackground1();
+    //renderBackground1();
 
 
     person.curr = $(elem);
@@ -31,14 +31,14 @@ function openModal(elem) {
 
 
     let x = "-webkit-cross-fade(url('" + person.young + "'), url('" + person.old + "'), " + 0 + ")";
-    $("#modal-content").css("background-image", x);
+    $(".modal-style").css("background-image", x);
 
     $("#shwcounter").text(person.counter);
 
     $("#myModal").show();
 
     //$("#addcounter").click(function () {
-    $("#modal-content").click(function () {
+    $(".modal-style").click(function () {
         crossfadeImage();
     });
 
@@ -121,7 +121,7 @@ function crossfadeImage() {
     if (person.counter <= 100) {
         $("#shwcounter").text(person.counter);
         let x = "-webkit-cross-fade(url('" + person.young + "'), url('" + person.old + "'), " + (person.counter / 100) + ")"
-        $("#modal-content").css("background-image", x);
+        $(".modal-style").css("background-image", x);
     } else {
         person.counter = 100;
     }

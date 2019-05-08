@@ -4,58 +4,50 @@ resetPerson();
 
 $(function () {
 
-    data = shuffle(xdata);
+     data = shuffle(xdata);
 
-    renderBackground();
+renderBackground();
 
     renderGrid();
 
     $(".col").click(function () {
-        openSingle(this);
+        openModal(this);
     });
 
     $(".col").bind('touchstart', function () {
         this.classList.toggle('hover');
     });
 
-    $(".addPercentage").click(function () {
-        crossfadeImage();
-    });
-
-    //register close event
-    $(".solved").click(function () {
-        imageSolved();
-    });
-
-
 });
 
+function openModal(elem) {
 
-function openSingle(elem) {
-
-    //render black background
     renderBackground1();
+
 
     person.curr = $(elem);
     person.young = getYoungImage(person.curr.data("number"));
     person.old = getOldImage(person.curr.data("number"));
 
-    $(".percentage").text(person.counter + "%");
-    $("#pie").attr("stroke-dasharray", "0, 100");
 
-    $("#imgY").attr("src", person.young).css("opacity", 1);
-    $("#imgO").attr("src", person.old).css("opacity", 0);
+    let x = "-webkit-cross-fade(url('" + person.young + "'), url('" + person.old + "'), " + 0 + ")";
+    $("#modal-content").css("background-image", x);
 
-    $("#mimgY").attr("src", person.young).css("opacity", 1);
-    $("#mimgO").attr("src", person.old).css("opacity", 0);
+    $("#shwcounter").text(person.counter);
 
+    $("#myModal").show();
 
-    $(".single").show();
-    $(".wrapper").hide();
+    //$("#addcounter").click(function () {
+        $("#modal-content").click(function () {
+        crossfadeImage();
+    });
 
-
-
+    //register close event
+    $("#solved").click(function () {
+        imageSolved();
+    });
 }
+
 
 function renderGrid() {
 
@@ -65,13 +57,14 @@ function renderGrid() {
     }
 }
 
+
 function getTile(cnt, data) {
 
     var myvar = '<div class="col" data-number="' + (cnt) + '">' +
         '                      <div class="container">' +
         '                          <div class="front" ><div class="topright"></div>' +
         '                              <div class="inner">' +
-        '                                  <p>' + (cnt + 1) + '</p>' +
+        '                                  <p>' + (cnt+1) + '</p>' +
         '                    <span>' + data.txt1 + '</span>' +
         '                              </div>' +
         '                          </div>' +
@@ -89,8 +82,6 @@ function getTile(cnt, data) {
 function imageSolved() {
 
     //show name in picture
-    $("#imgY").css("opacity", 0);
-    $("#imgO").css("opacity", 1);
     $("#firstname").text(data[person.curr.data("number")].firstname);
     $("#lastname").text(data[person.curr.data("number")].lastname);
     $("#person").removeClass("w3-hide").addClass("w3-show");
@@ -110,31 +101,25 @@ function resetAfterSolving() {
 
     resetPerson();
 
-    $(".single").removeClass("zoom").addClass("zoomout");
+    $("#myModal").removeClass("zoom").addClass("zoomout");
 
     window.setTimeout(function () {
-        $(".single").hide();
-        $(".wrapper").show();
-        $(".single").removeClass("zoomout").addClass("zoom");
+        $("#myModal").hide();
+        $("#myModal").removeClass("zoomout").addClass("zoom");
     }, 2000);
 }
 
 /* increase the counter and cross fade the persons images */
 function crossfadeImage() {
 
-    person.counter = person.counter + 5;
+    person.counter = person.counter + 2;
 
     if (person.counter <= 100) {
-
-        $(".percentage").text(person.counter + "%");
-        $("#pie").attr("stroke-dasharray", "" + person.counter + ", 100");
-
-        $("#imgY").css("opacity", 1 - (person.counter / 100));
-        $("#imgO").css("opacity", 0 + (person.counter / 100));
-
+        $("#shwcounter").text(person.counter);
+        let x = "-webkit-cross-fade(url('" + person.young + "'), url('" + person.old + "'), " + (person.counter / 100) + ")"
+        $("#modal-content").css("background-image", x);
     } else {
         person.counter = 100;
-        imageSolved();
     }
 }
 
@@ -157,21 +142,20 @@ function resetPerson() {
 }
 
 function shuffle(array) {
-    var currentIndex = array.length,
-        temporaryValue, randomIndex;
-
+    var currentIndex = array.length, temporaryValue, randomIndex;
+  
     // While there remain elements to shuffle...
     while (0 !== currentIndex) {
-
-        // Pick a remaining element...
-        randomIndex = Math.floor(Math.random() * currentIndex);
-        currentIndex -= 1;
-
-        // And swap it with the current element.
-        temporaryValue = array[currentIndex];
-        array[currentIndex] = array[randomIndex];
-        array[randomIndex] = temporaryValue;
+  
+      // Pick a remaining element...
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex -= 1;
+  
+      // And swap it with the current element.
+      temporaryValue = array[currentIndex];
+      array[currentIndex] = array[randomIndex];
+      array[randomIndex] = temporaryValue;
     }
-
+  
     return array;
-}
+  }
