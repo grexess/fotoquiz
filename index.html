@@ -37,17 +37,17 @@
         </div>
     </div>
 
-    <div class="single w3-center" style="display:none">
+    <div class="single w3-center modal zoomin"" style=" display:none">
 
         <canvas id=c></canvas>
 
-        <div class="w3-row w3-padding-64">
+        <div class="w3-row w3-padding-64 w3-hide-small">
             <div class="w3-half">
-                <div id="div1">
-                    <img src="img01.jpg" style="width:100%; opacity: 0.5;">
-                    <img src="img02.jpg" style="width:100%; opacity: 0.5;">
+                <div class="overlayImg">
+                    <img id="imgY" src="" style="width:100%; height: auto;">
+                    <img id="imgO" src="" style="width:100%; height: auto;">
                     <div id="person"
-                        class="w3-animate-zoom w3-panel w3-white w3-opacity w3-leftbar w3-border-green w3-display-bottomleft w3-margin w3-left-align w3-text-green"
+                        class="w3-hide w3-animate-zoom w3-panel w3-white w3-opacity w3-leftbar w3-border-green w3-display-bottomleft w3-margin w3-left-align w3-text-green"
                         style="width: 50%;">
                         <h1 id="firstname"></h1>
                         <h2 id="lastname"></h2>
@@ -56,45 +56,40 @@
             </div>
             <div class="w3-half">
                 <div id="div2">
-                    <div>Percentage</div>
-                    <div id="solved" class="btn btngreen">
+                    <div>
+                        <div id="shwcounter" class="circle">0</div>
+                    </div>
+                    <div class="btn btngreen solved">
                         <i class="fa fa-check"></i>
                     </div>
                 </div>
             </div>
         </div>
-      
-    </div>
 
+        <!-- Mobile Version-->
+        <div class="w3-container w3-center w3-hide-large w3-hide-medium">
 
-    <!-- full image in modal-->
-    <!--   <div id="myModal" class="modal zoomin">
-        <canvas id=c></canvas>
-        <div class="w3-third w3-center">
-            <div class="w3-display-container modal-style">
-                <div class="w3-display-middle">
-                    <div class="w3-margin">
-                        <div id="shwcounter" class="circle">0</div>
-                    </div>
-                    <div class="w3-margin">
-                        <div id="solved" class="btn btngreen">
-                            <i class="fa fa-check"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="w3-twothird w3-center">
-            <div id="modal-content" class="w3-display-container w3-round-xlarge modal-style">
-                <div id="person"
+            <div class="moverlayImg">
+                <img id="mimgY" src="" style="width:100%; height: auto;">
+                <img id="mimgO" src="" style="width:100%; height: auto;">
+                <div id="mperson"
                     class="w3-hide w3-animate-zoom w3-panel w3-white w3-opacity w3-leftbar w3-border-green w3-display-bottomleft w3-margin w3-left-align w3-text-green"
                     style="width: 50%;">
                     <h1 id="firstname"></h1>
                     <h2 id="lastname"></h2>
                 </div>
             </div>
+            <div class="btn btngreen solved">
+                <i class="fa fa-check"></i>
+            </div>
         </div>
-    </div> -->
+
+
+    </div>
+
+
+
+
 </body>
 
 </html>

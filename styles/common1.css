@@ -280,6 +280,8 @@ h1 {
   text-align: center;
   background: #fff;
   border: 1px solid #4286f4;
+  display: inline-block;
+  margin: 32px;
 }
 
 canvas {

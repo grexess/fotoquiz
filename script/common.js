@@ -10,10 +10,6 @@ $(function () {
 
     renderGrid();
 
- /*    $(".col").click(function () {
-        openModal(this);
-    }); */
-
     $(".col").click(function () {
         openSingle(this);
     }); 
@@ -27,42 +23,24 @@ $(function () {
 
 function openSingle(elem){
 
-    // renderBackground1();
+    //render black background
+    renderBackground1();
 
     person.curr = $(elem);
     person.young = getYoungImage(person.curr.data("number"));
     person.old = getOldImage(person.curr.data("number"));
 
+    $("#imgY").attr("src",person.young).css("opacity", 1);
+    $("#imgO").attr("src",person.old ).css("opacity", 0);
 
-    let x = "-webkit-cross-fade(url('" + person.young + "'), url('" + person.old + "'), " + 0 + ")";
-    $("#modal-content").css("background-image", x);
+    $("#mimgY").attr("src",person.young).css("opacity", 1);
+    $("#mimgO").attr("src",person.old ).css("opacity", 0);
+
 
     $(".single").show();
     $(".wrapper").hide();
 
-
-}
-
-
-function openModal(elem) {
-
-    renderBackground1();
-
-
-    person.curr = $(elem);
-    person.young = getYoungImage(person.curr.data("number"));
-    person.old = getOldImage(person.curr.data("number"));
-
-
-    let x = "-webkit-cross-fade(url('" + person.young + "'), url('" + person.old + "'), " + 0 + ")";
-    $("#modal-content").css("background-image", x);
-
-    $("#shwcounter").text(person.counter);
-
-    $("#myModal").show();
-
-    //$("#addcounter").click(function () {
-    $("#modal-content").click(function () {
+    $("#div1").click(function () {
         crossfadeImage();
     });
 
@@ -71,11 +49,11 @@ function openModal(elem) {
     });
 
     //register close event
-    $("#solved").click(function () {
+    $(".solved").click(function () {
         imageSolved();
     });
-}
 
+}
 
 function renderGrid() {
 
@@ -84,7 +62,6 @@ function renderGrid() {
         $(".cols").append(getTile(i, data[i]));
     }
 }
-
 
 function getTile(cnt, data) {
 
@@ -129,11 +106,12 @@ function resetAfterSolving() {
 
     resetPerson();
 
-    $("#myModal").removeClass("zoom").addClass("zoomout");
+    $(".single").removeClass("zoom").addClass("zoomout");
 
     window.setTimeout(function () {
-        $("#myModal").hide();
-        $("#myModal").removeClass("zoomout").addClass("zoom");
+        $(".single").hide();
+        $(".wrapper").show();
+        $(".single").removeClass("zoomout").addClass("zoom");
     }, 2000);
 }
 
@@ -144,8 +122,10 @@ function crossfadeImage() {
 
     if (person.counter <= 100) {
         $("#shwcounter").text(person.counter);
-        let x = "-webkit-cross-fade(url('" + person.young + "'), url('" + person.old + "'), " + (person.counter / 100) + ")"
-        $("#modal-content").css("background-image", x);
+
+        $("#imgY").css("opacity", 1 - (person.counter / 100));
+        $("#imgO").css("opacity", 0 + (person.counter / 100));
+
     } else {
         person.counter = 100;
     }
