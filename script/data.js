@@ -101,7 +101,7 @@ xdata = [{
     imgY: '012Y.png',
     imgO: '012O.png',
     firstname: 'Peer Arvo',
-    lastname: 'Hoinki',
+    lastname: 'Hoinkis',
     id: '?',
     txt1: 'Wer bin ich ...',
     txt2: '?'
